@@ -1,0 +1,34 @@
+version: '3.1'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "81:81"
+      - "443:443"
+    volumes:
+      - ./webconfigs:/etc/nginx/conf.d
+      - ./www:/var/www
+      - ./logs:/var/log/nginx
+    links:
+      - php
+  php:
+    build: ./images/php7.3-fpm
+    depends_on:
+      - mysql
+    links:
+      - "mysql:project"
+    volumes:
+      - ./www:/var/www
+  mysql:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./databases/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_PASSWORD=jkl98k17
+      - MYSQL_USER=igor
+      - MYSQL_DATABASE=project

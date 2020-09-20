@@ -1,0 +1,68 @@
+PDOException::__set_state(array(
+   'message' => 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'�иродаАнонс.jpg, description=PRIRODA, data_news\' at line 1',
+   'string' => '',
+   'code' => '42000',
+   'file' => '/var/www/project/config/dbQuery.php',
+   'line' => 31,
+   'trace' => 
+  array (
+    0 => 
+    array (
+      'file' => '/var/www/project/config/dbQuery.php',
+      'line' => 31,
+      'function' => 'execute',
+      'class' => 'PDOStatement',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 
+        array (
+          'headers' => 'PRIRODA',
+          'Announcement' => 'PRIRODA',
+          'img' => 'ПриродаАнонс.jpg',
+          'description' => 'PRIRODA',
+          'data_news' => '19.09.20',
+        ),
+      ),
+    ),
+    1 => 
+    array (
+      'file' => '/var/www/project/includebody/services/service_refactorNEWS.php',
+      'line' => 19,
+      'function' => 'updateData',
+      'class' => 'DB\\dbQuery',
+      'type' => '->',
+      'args' => 
+      array (
+        0 => 'news',
+        1 => 
+        array (
+          'headers' => 'PRIRODA',
+          'Announcement' => 'PRIRODA',
+          'img' => 'ПриродаАнонс.jpg',
+          'description' => 'PRIRODA',
+          'data_news' => '19.09.20',
+        ),
+        2 => '1',
+      ),
+    ),
+    2 => 
+    array (
+      'file' => '/var/www/project/includebody/services/service_refactorNEWS.php',
+      'line' => 29,
+      'function' => 'refactor',
+      'class' => 'refactorNews\\service_refactorNEWS',
+      'type' => '->',
+      'args' => 
+      array (
+      ),
+    ),
+  ),
+   'previous' => NULL,
+   'errorInfo' => 
+  array (
+    0 => '42000',
+    1 => 1064,
+    2 => 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'�иродаАнонс.jpg, description=PRIRODA, data_news\' at line 1',
+  ),
+))

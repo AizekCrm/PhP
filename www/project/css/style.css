@@ -1,0 +1,38 @@
+.body {
+    max-width: 60%;
+    margin: 0 auto;
+    width: 100%;
+}
+.news-block{
+
+}
+.header {
+    background-color: blanchedalmond;
+    padding: 5%;
+}
+.footer {
+    background-color: blanchedalmond;
+    padding: 5%;
+}
+.text-align {
+    text-align: center;
+}
+.anons{
+
+}
+.a {
+    color: #000000;
+}
+.padding{
+    width: 92%;
+    margin-left: 4%
+}
+.page{
+    display: flex;
+    width: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.page_marg{
+    margin-left: 1%;
+}
